@@ -1,4 +1,4 @@
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonList } from "@ionic/react";
+import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonList, IonGrid, IonButton } from "@ionic/react";
 
 const Feed: React.FC = () => {
 
@@ -25,13 +25,18 @@ const Feed: React.FC = () => {
                 <IonList inset={true}>
                     {Movies.map((item, index) => (
                         <IonCard>
-                            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-                            <IonCardHeader>
-                                <IonCardTitle>{item.name}</IonCardTitle>
-                                <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-                            </IonCardHeader>
+                            <IonGrid>
+                                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                                <IonCardHeader>
+                                    <IonCardTitle>{item.name}</IonCardTitle>
+                                    <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+                                </IonCardHeader>
 
-                            <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+                                <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+                                <IonButton fill="outline">Like</IonButton>
+                                <IonButton fill="outline">Comment</IonButton>
+                                <IonButton fill="outline">Share</IonButton>
+                            </IonGrid>
                         </IonCard>
                     ))}
 
